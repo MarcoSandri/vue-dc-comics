@@ -1,6 +1,6 @@
 <template>
 
-    <section>
+    <section class="content">
         <div class="container">
             
             <h1> --> Content goes here &#60;--</h1>
@@ -16,16 +16,13 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
   @import "../assets/style/general.scss";
   @import "../assets/style/colors.scss";
 
-  section {
+  .content {
     background-color: $primary;
-    padding: 3rem;
     color: #fff;
   }
-
-
 
 </style>

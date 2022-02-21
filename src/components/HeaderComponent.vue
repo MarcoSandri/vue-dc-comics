@@ -34,13 +34,12 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
   @import "../assets/style/general.scss";
   @import "../assets/style/colors.scss";
 
   header {
-    width: 100vw;
-
+    
     .container {
       display: flex;
       justify-content: space-between;
