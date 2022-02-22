@@ -57,11 +57,7 @@
                 <div class="social">
                     <h1>FOLLOW US</h1>
                     <ul>
-                        <li><a href="#"><img src="../assets/img/footer-facebook.png"></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-twitter.png"></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-youtube.png"></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-pinterest.png"></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-periscope.png"></a></li>
+                        <li v-for="(social, index) in socials" :key="index"><a href="#"><img :src="require('../assets/img/'+ social.url)"></a></li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +67,33 @@
 
 <script>
     export default {
-        name : "FooterComponent"
+        name : "FooterComponent",
+        data() {
+            return {
+            socials : [
+                {   
+                    name: "facebook",
+                    url : "footer-facebook.png"
+                },
+                {   
+                    name: "twitter",
+                    url : "footer-twitter.png"
+                },
+                {   
+                    name: "youtube",
+                    url : "footer-youtube.png"
+                },
+                {   
+                    name: "pinterest",
+                    url : "footer-pinterest.png"
+                },
+                {   
+                    name: "periscope",
+                    url : "footer-periscope.png"
+                }
+            ]
+            }
+        }
     }
 </script>
 
